@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.x.QuickReturnListView
+        android:id="@+id/quickList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/sticky"
+        style="@style/Item.Sticky"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left" >
+
+                <com.danh32.fontify.TextView
+                    android:id="@+id/ivUpvote"
+                    style="@style/BaskVl_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="3dp"
+                    android:text="23 Logical"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <com.danh32.fontify.TextView
+                    android:id="@+id/ivDownvote"
+                    style="@style/BaskVl_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="3dp"
+                    android:text="23 Illogical"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" >
+
+                <com.danh32.fontify.TextView
+                    android:id="@+id/ivReply"
+                    style="@style/BaskVl_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:text="23 Reply"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView1"
+            style="@style/walkwaybold"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="P"
+            android:textColor="#05060b"
+            android:textSize="40dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:src="@drawable/pp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm"
+            style="@style/Lato_Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="5dp"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView1"
+            style="@style/BaskVl_Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/commentorName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName"
+            style="@style/LatoSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginTop="0dp"
+            android:text="Prateek Rathore :"
+            android:textColor="#ffffff"
+            android:textSize="19dp" />
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,187 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_example</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Example</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Example</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Example</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Example</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Example</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_example</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_example</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Example</item>
+        <item name="android:fontFamily">@style/Caviar</item>
+        <item name="android:actionBarTabTextStyle">@style/text_style</item>
+    </style>
+
+   <style name="text_style">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Caviar">
+        <item name="font">@string/Caviar</item>
+    </style>
+
+    <style name="caviar_bold">
+        <item name="font">@string/caviar_bold</item>
+    </style>
+
+    <style name="Cavier">
+        <item name="font">@string/Caviar</item>
+    </style>
+
+    <style name="walkwaybold">
+        <item name="font">@string/walkwayBold</item>
+    </style>
+
+    <style name="walkwayultrabold">
+        <item name="font">@string/walkwayUltraBold</item>
+    </style>
+
+    <style name="walkwayblack">
+        <item name="font">@string/walkwayBlack</item>
+    </style>
+     <style name="sabon_bold">
+        <item name="font">@string/sabon_bold</item>
+    </style>
+
+    <style name="Merriweather_Bold">
+        <item name="font">@string/Merriweather_Bold</item>
+    </style>
+    <style name="Merriweather_Regular">
+        <item name="font">@string/Merriweather_Regular</item>
+    </style>
+    <style name="walkwaysemibold">
+        <item name="font">@string/walkwaySemiBold</item>
+    </style>
+
+    <style name="Lato_Light">
+        <item name="font">@string/LatoLight</item>
+    </style>
+
+    <style name="OpenSans_Regular">
+        <item name="font">@string/OpenSans_Regular</item>
+    </style>
+
+    <style name="RobotoRegular">
+        <item name="font">@string/RobotoRegular</item>
+    </style>
+
+    <style name="LatoSemiBold">
+        <item name="font">@string/LatoSemiBold</item>
+    </style>
+
+    <style name="Lato_bold">
+        <item name="font">@string/LatoBold</item>
+    </style>
+
+    <style name="OpenSans_LightItalic">
+        <item name="font">@string/OpenSans_LightItalic</item>
+    </style>
+    <style name="trade">
+        <item name="font">@string/trade</item>
+    </style>
+<style name="sabon">
+        <item name="font">@string/Sabon</item>
+    </style>
+<style name="tradeL">
+        <item name="font">@string/tradeL</item>
+    </style>
+<style name="Josefinsans_Bold">
+        <item name="font">@string/Josefin_Bold</item>
+    </style>
+    <style name="BaskVl">
+        <item name="font">@string/baskvl</item>
+    </style>
+     <style name="BaskVl_Bold">
+        <item name="font">@string/baskvl_bold</item>
+    </style>
+
+    <style name="ActionBar.Solid.Example" parent="@android:style/Widget.Holo.Light.ActionBar.Solid">
+        <item name="android:background">@drawable/ab_solid_example</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_example</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_example</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Example</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Example" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_example</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Example</item>
+    </style>
+
+    <style name="PopupMenu.Example" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_example</item>
+    </style>
+
+    <style name="DropDownListView.Example" parent="@android:style/Widget.Holo.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_example</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Example" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_example</item>
+    </style>
+
+    <style name="DropDownNav.Example" parent="@android:style/Widget.Holo.Light.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_example</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_example</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_example</item>
+    </style>
+
+    <style name="ProgressBar.Example" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_example</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Example" parent="@android:style/Widget.Holo.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_example</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Example.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Example</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Example</item>
+    </style>
+
+    <!-- STickytheme -->
+    <style name="Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+    </style>
+
+    <style name="Item.Top">
+        <item name="android:background">@color/top_item</item>
+    </style>
+
+    <style name="Item.Sticky">
+        <item name="android:background">@drawable/sticky_item_background</item>
+        <item name="android:textColor">@color/sticky_item_text</item>
+        <item name="android:layout_height">@dimen/sticky_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="Item.Bottom">
+        <item name="android:background">@color/bottom_item</item>
+    </style>
+
+    <style name="Item.Bottom.Alt">
+        <item name="android:background">@color/bottom_item_alt</item>
+    </style>
+
+</resources>

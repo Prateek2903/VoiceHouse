@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#e5e5e5">
+    
+    <RelativeLayout
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#e6e6e6"
+    >
+
+    <LinearLayout
+        android:id="@+id/linearComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RelativeLayout1"
+        android:layout_below="@+id/RelativeLayout1"
+    
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/frameLayout1"
+        android:background="#ffffff"
+        android:showDividers="middle"
+        android:weightSum="3" >
+        <com.danh32.fontify.TextView
+            android:id="@+id/tvAgree"
+            style="@style/LatoSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignBaseline="@+id/tvDisagree"
+            android:layout_alignBottom="@+id/tvDisagree"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/agree_background"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:alpha="0.7"
+            android:text="Agree"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/tvDisagree"
+            style="@style/LatoSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvAgree"
+            android:background="@drawable/disagree"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:text="Disagree"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+
+        
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/inviteHome"
+            style="@style/LatoSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+           android:gravity="center"
+            android:background="@drawable/invite"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="Invite to Discussion"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#ffffff"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:padding="10dp" >
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/tvQuestion"
+            style="@style/trade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Question"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textSize="24dp" />
+    </FrameLayout>
+
+</RelativeLayout>
+    
+    
+</RelativeLayout>
