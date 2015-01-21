@@ -170,7 +170,7 @@ public class Disagree_Fragment extends ListFragment{
 	}
 	class GetComments extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
-		String url = "http://192.168.0.108/X/getallcomments.php";
+		String url = "http://voicehouse.in/php/getallcomments.php";
 
 		public GetComments() {
 			// this.paramets = params;
@@ -381,7 +381,7 @@ public class Disagree_Fragment extends ListFragment{
 //							+ ""));
 //					params.add(new BasicNameValuePair("do", "1"));
 ////					udv = new UpDownVotesAgree(params,
-//							"http://192.168.0.108/X/logical.php", 0);
+//							"http://voicehouse.in/php/logical.php", 0);
 //					udv.execute();
 
 //				}
@@ -398,7 +398,7 @@ public class Disagree_Fragment extends ListFragment{
 //							+ ""));
 //					params.add(new BasicNameValuePair("do", "0"));
 //					udv = new UpDownVotesAgree(params,
-//							"http://192.168.0.108/X/logical.php", 1);
+//							"http://voicehouse.in/php/logical.php", 1);
 //					udv.execute();
 //				}
 //			});

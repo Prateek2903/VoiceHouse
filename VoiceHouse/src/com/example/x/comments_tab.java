@@ -100,7 +100,7 @@ public class comments_tab extends FragmentActivity{
 						params.add(new BasicNameValuePair("discussion_id",disc_id+""));
 						params.add(new BasicNameValuePair("client_id", "1"));
 						params.add(new BasicNameValuePair("type", flag+""));
-						Reply async= new Reply(params,"http://192.168.0.108/X/comments.php");
+						Reply async= new Reply(params,"http://voicehouse.in/php/comments.php");
 						Log.d("clicked","post");
 						et.setText("");
 						async.execute();

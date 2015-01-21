@@ -36,7 +36,7 @@ public class new_comment_layout extends Activity {
     private final String[] arrayy = {"Hello", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome", "World", "Android", "is", "Awesome"};
     JSONArray array;
 	GetComments getpost;
-	String url = "http://192.168.0.108/X/getallcomments.php";
+	String url = "http://voicehouse.in/php/getallcomments.php";
 	int disc_id;
 	List<NameValuePair> params;
 	public static CommentsAdapter adapter;

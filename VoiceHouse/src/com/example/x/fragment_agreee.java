@@ -39,7 +39,7 @@ public class fragment_agreee extends Fragment{
 	
 	class GetComments extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
-		String url="http://192.168.0.108/X/getallcomments.php";
+		String url="http://voicehouse.in/php/getallcomments.php";
 		
 		@Override
 		protected void onPreExecute() {

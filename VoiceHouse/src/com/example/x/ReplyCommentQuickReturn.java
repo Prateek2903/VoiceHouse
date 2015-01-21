@@ -44,7 +44,7 @@ public class ReplyCommentQuickReturn extends Activity {
 	LinearLayout ll;
 	private View mPlaceHolder;
 	private int mCachedVerticalScrollRange;
-	String url="http://192.168.0.108/X/getreply.php";
+	String url="http://voicehouse.in/php/getreply.php";
 	ArrayList<Comment> commentList;
 	MyCommentHolder holder;
 	EditText et;

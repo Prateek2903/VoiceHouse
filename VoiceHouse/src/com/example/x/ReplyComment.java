@@ -32,7 +32,7 @@ public class ReplyComment extends Activity{
 	JSONArray array;
 	GetComments getpost;
 	Reply replytocomment;
-	String url = "http://192.168.0.108/X/getreply.php",reply_url="http://192.168.0.108/X/reply.php";
+	String url = "http://voicehouse.in/php/getreply.php",reply_url="http://voicehouse.in/php/reply.php";
 	int disc_id;
 	JSONObject jObject;
 	List<NameValuePair> params;
@@ -71,7 +71,7 @@ public class ReplyComment extends Activity{
 				params.add(new BasicNameValuePair("comment_id",com_id+ ""));
 				params.add(new BasicNameValuePair("client_id", "1"));
 				params.add(new BasicNameValuePair("do", "1"));
-				Agreed async = new Agreed(params, "http://192.168.0.108/X/logical.php");
+				Agreed async = new Agreed(params, "http://voicehouse.in/php/logical.php");
 				if(illogical.getAlpha()==0.7f)
 				if(logical.getAlpha()==0.7f)
 				{	
@@ -97,7 +97,7 @@ public class ReplyComment extends Activity{
 				params.add(new BasicNameValuePair("comment_id",com_id+ ""));
 				params.add(new BasicNameValuePair("client_id", "1"));
 				params.add(new BasicNameValuePair("do", "2"));
-				Agreed async = new Agreed(params, "http://192.168.0.108/X/logical.php");
+				Agreed async = new Agreed(params, "http://voicehouse.in/php/logical.php");
 				if(logical.getAlpha()==0.7f)
 				if(illogical.getAlpha()==0.7f)
 				{

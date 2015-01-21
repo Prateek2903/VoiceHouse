@@ -30,9 +30,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.FacebookException;
+import com.facebook.FacebookOperationCanceledException;
+import com.facebook.Session;
+import com.facebook.widget.WebDialog;
+import com.facebook.widget.WebDialog.OnCompleteListener;
+import com.facebook.widget.WebDialog.RequestsDialogBuilder;
+
 public class Question extends Fragment implements
 		android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener {
-
+Session currentSession;
 	ListView list;
 	Discussion disc;
 	DiscussionAdapter adapter;
@@ -41,7 +48,7 @@ public class Question extends Fragment implements
 	ProgressDialog pDialog;
 	MyViewHolder mvh;
 	List<NameValuePair> params;
-	String url = "http://192.168.0.108/X/getquestion.php";
+	String url = "http://voicehouse.in/php/getquestion.php";
 	MyViewHolder holder;
 	android.support.v4.widget.SwipeRefreshLayout swipe;
 
@@ -50,7 +57,8 @@ public class Question extends Fragment implements
 			Bundle SavedInstances) {
 		SharedPreferences page = getActivity().getSharedPreferences("page",
 				Context.MODE_PRIVATE);
-		String choice_id = page.getString("Page", null);
+		currentSession=Session.getActiveSession();
+				String choice_id = page.getString("Page", null);
 		View view = inflater.inflate(R.layout.first_topic, container, false);
 		list = (ListView) view.findViewById(R.id.listFirstTopic);
 		swipe = (android.support.v4.widget.SwipeRefreshLayout) view
@@ -183,7 +191,7 @@ public class Question extends Fragment implements
 							+ ""));
 					params.add(new BasicNameValuePair("client_id", "1"));
 					params.add(new BasicNameValuePair("do", "1"));
-					Agreed async = new Agreed(params, "http://192.168.0.108/X/Agree.php",0);
+					Agreed async = new Agreed(params, "http://voicehouse.in/php/Agree.php",0);
 					async.execute();
 					if(mvh.disagree.getAlpha()==0.7f)
 					if(mvh.agree.getAlpha()==0.7f )
@@ -210,7 +218,7 @@ public class Question extends Fragment implements
 							+ ""));
 					params.add(new BasicNameValuePair("client_id", "1"));
 					params.add(new BasicNameValuePair("do", "2"));
-					Agreed async = new Agreed(params, "http://192.168.0.108/X/Agree.php",1);
+					Agreed async = new Agreed(params, "http://voicehouse.in/php/Agree.php",1);
 					async.execute();
 					if(mvh.agree.getAlpha()==0.7f)
 					if(mvh.disagree.getAlpha()==0.7f )
@@ -234,8 +242,10 @@ public class Question extends Fragment implements
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
 					MyViewHolder mvh = (MyViewHolder) v.getTag();
+					publishStory();
 				}
 			});
+	
 			holder.ll.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
@@ -296,7 +306,52 @@ public class Question extends Fragment implements
 		GetPos getpost = new GetPos(params, url);
 		getpost.execute();
 	}
-}
+
+public void publishStory() {
+	  Bundle params = new Bundle();
+	  params.putString("name", "test-name");
+	  params.putString("message", "test-caption");
+	  params.putString("description", "test-description");
+	  params.putString("link", "http://curious-blog.blogspot.com");
+	  Session.setActiveSession(currentSession);
+	
+	  RequestsDialogBuilder feedDialog = (new WebDialog.RequestsDialogBuilder(getActivity()));
+	  feedDialog.setMessage("Get a life dude..");
+	  feedDialog.setTo(facebook_login.u.getId());
+	   feedDialog.setOnCompleteListener(new OnCompleteListener() {
+	
+	     @Override
+	     public void onComplete(Bundle values,
+	       FacebookException error) {
+	      if (error == null) {
+	       // When the story is posted, echo the success
+	       // and the post Id.
+	       final String postId = values.getString("post_id");
+	       if (postId != null) {
+	        // do some stuff
+	       } else {
+	        // User clicked the Cancel button
+	        Toast.makeText(getActivity(),
+	          "Publish cancelled", Toast.LENGTH_SHORT)
+	          .show();
+	       }
+	      } else if (error instanceof FacebookOperationCanceledException) {
+	       // User clicked the "x" button
+	       Toast.makeText(getActivity(),
+	         "Publish cancelled", Toast.LENGTH_SHORT)
+	         .show();
+	      } else {
+	       // Generic, ex: network error
+	       Toast.makeText(getActivity(),
+	         "Error posting story", Toast.LENGTH_SHORT)
+	         .show();
+	      }
+	     }
+	
+  }).build().show();
+	 
+
+	}
 class Discussion {
 	String discussion;
 	JSONArray array;
@@ -384,4 +439,5 @@ class MyViewHolder {
 		this.disagrees = disagrees;
 		this.discussion = discussion;
 	}
+}
 }

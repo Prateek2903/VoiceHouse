@@ -37,7 +37,7 @@ public class write_comment extends TabActivity {
 	ActionBar actionbar;
 	float lastX,currentX;
 	List<NameValuePair> params;
-	String url = "http://192.168.0.108/X/comment.php";
+	String url = "http://voicehouse.in/php/comment.php";
 	WriteComment writeComment;
 	int comm_id,d;
 	private GestureDetectorCompat gDetector;

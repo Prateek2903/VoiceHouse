@@ -35,7 +35,7 @@ public class Agree_comments extends Fragment
 	}
 	class GetComments extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
-		String url="http://192.168.0.108/X/getallcomments.php";
+		String url="http://voicehouse.in/php/getallcomments.php";
 		public GetComments(List<NameValuePair> params, String url) {
 			//this.paramets = params;
 			paramets = new ArrayList<NameValuePair>();

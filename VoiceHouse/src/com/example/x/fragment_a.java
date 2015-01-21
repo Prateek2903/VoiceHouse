@@ -36,7 +36,7 @@ public class fragment_a extends Fragment{
 	public class GetPost extends AsyncTask<Void, Void, Void> {
 
 		List<NameValuePair> paramets;
-		String url = "http://192.168.0.108/X/getallcomments.php";
+		String url = "http://voicehouse.in/php/getallcomments.php";
 
 		public GetPost() {
 			this.paramets = new ArrayList<NameValuePair>();

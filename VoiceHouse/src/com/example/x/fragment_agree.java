@@ -43,7 +43,7 @@ public class fragment_agree extends Fragment implements
 
 	JSONArray array;
 	GetComments getpost;
-	String url = "http://192.168.0.108/X/getallcomments.php";
+	String url = "http://voicehouse.in/php/getallcomments.php";
 	int disc_id;
 	List<NameValuePair> params;
 	public static CommentsAdapter adapter;
@@ -290,7 +290,7 @@ public class fragment_agree extends Fragment implements
 					params.add(new BasicNameValuePair("client_id", "1"));
 					params.add(new BasicNameValuePair("do", "2"));
 					Agreed async = new Agreed(params,
-							"http://192.168.0.108/X/logical.php", 0);
+							"http://voicehouse.in/php/logical.php", 0);
 					if (hld.logical.getAlpha() == 0.7f) {
 						if (hld.illogical.getAlpha() == 0.7f) {
 							hld.illogical.setAlpha(1);
@@ -333,7 +333,7 @@ public class fragment_agree extends Fragment implements
 					params.add(new BasicNameValuePair("client_id", "1"));
 					params.add(new BasicNameValuePair("do", "1"));
 					Agreed async = new Agreed(params,
-							"http://192.168.0.108/X/logical.php", 0);
+							"http://voicehouse.in/php/logical.php", 0);
 					async.execute();
 				}
 			});

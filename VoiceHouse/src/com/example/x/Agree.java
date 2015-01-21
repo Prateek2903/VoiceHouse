@@ -28,7 +28,7 @@ import android.widget.TextView;
 	
 		JSONArray array;
 		GetComments getpost;
-		String url = "http://192.168.0.108/X/getallcomments.php";
+		String url = "http://voicehouse.in/php/getallcomments.php";
 		int disc_id;
 		List<NameValuePair> params;
 		public static CommentsAdapter adapter;

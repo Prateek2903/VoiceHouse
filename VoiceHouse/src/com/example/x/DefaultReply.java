@@ -44,7 +44,7 @@ public class DefaultReply extends Activity {
 	LinearLayout ll;
 	private View mPlaceHolder;
 	private int mCachedVerticalScrollRange;
-	String url="http://192.168.0.108/X/getreply.php";
+	String url="http://voicehouse.in/php/getreply.php";
 	ArrayList<Comment> commentList;
 	MyCommentHolder holder;
 	EditText et;
@@ -198,7 +198,7 @@ public class DefaultReply extends Activity {
 							.toString()));
 					params.add(new BasicNameValuePair("comment_id", comm_id+""));
 					params.add(new BasicNameValuePair("client_id", "1"));
-					Reply async= new Reply(params,"http://192.168.0.108/X/reply.php");
+					Reply async= new Reply(params,"http://voicehouse.in/php/reply.php");
 					async.execute();
 				}
 			}

@@ -29,7 +29,7 @@ import com.facebook.model.GraphUser;
 public class facebook_login extends Activity {
  private Session.StatusCallback sessionStatusCallback;
  private Session currentSession;
-GraphUser u;
+static GraphUser u;
 Request request ;
  private ImageButton login;
  String name,id,email;
@@ -261,7 +261,7 @@ SharedPreferences.Editor editor;
 			params.add(new BasicNameValuePair("name",name));
 			params.add(new BasicNameValuePair("client_id",id));
 			params.add(new BasicNameValuePair("email",email));
-			jsonobject = jsonParser.makeHttpRequest("http://192.168.0.108/X/clientdata.php", "POST", params);
+			jsonobject = jsonParser.makeHttpRequest("http://voicehouse.in/php/clientdata.php", "POST", params);
 			String status="Success";
 			return  status;
 		}

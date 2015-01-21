@@ -245,7 +245,7 @@ public class LoginFacebook extends Activity //implements LocationListener
 			params.add(new BasicNameValuePair("name",name));
 			params.add(new BasicNameValuePair("client_id",id));
 			params.add(new BasicNameValuePair("email",email));
-			jsonobject = jsonParser.makeHttpRequest("http://192.168.0.108/X/clientdata.php", "POST", params);
+			jsonobject = jsonParser.makeHttpRequest("http://voicehouse.in/php/clientdata.php", "POST", params);
 			String status="Success";
 			return  status;
 		}

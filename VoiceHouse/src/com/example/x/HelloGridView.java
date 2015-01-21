@@ -93,7 +93,7 @@ public class HelloGridView extends Activity {
 
 	class SendInterest extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
-		String url = "http://192.168.0.108/X/saveinterest.php";
+		String url = "http://voicehouse.in/php/saveinterest.php";
 		public SendInterest(List<NameValuePair> params) {
 			this.paramets = params;
 		}

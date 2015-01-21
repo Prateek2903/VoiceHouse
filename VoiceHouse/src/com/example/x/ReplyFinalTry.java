@@ -37,7 +37,7 @@ public class ReplyFinalTry extends Activity {
 	GetReply goc;
 	ListView list;
 	LinearLayout ll;
-	String url = "http://192.168.0.108/X/getreply.php";
+	String url = "http://voicehouse.in/php/getreply.php";
 	ArrayList<Comment> commentList;
 	MyCommentHolder holder;
 	EditText et;
@@ -79,7 +79,7 @@ public class ReplyFinalTry extends Activity {
 							+ ""));
 					params.add(new BasicNameValuePair("client_id", "1"));
 					Reply async = new Reply(params,
-							"http://192.168.0.108/X/reply.php");
+							"http://voicehouse.in/php/reply.php");
 					async.execute();
 				}
 			}

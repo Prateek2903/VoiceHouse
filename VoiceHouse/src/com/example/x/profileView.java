@@ -88,10 +88,10 @@ String rating(double i)
 			JSONParse jsonParser = new JSONParse(); // userchoices[spinner.getSelectedItemPosition()]
 			// Building Parameters
 			List<NameValuePair> params1 = new ArrayList<NameValuePair>();
-			params1.add(new BasicNameValuePair("client_id", client_id));
+			params1.add(new BasicNameValuePair("client_id","1"));
 			jsonobject = jsonParser
 					.makeHttpRequest(
-							"http://192.168.0.108/X/fetchinterest.php", "POST",
+							"http://voicehouse.in/php/fetchinterest.php", "POST",
 							params1);
 			try {
 				// Locate the NodeList name
