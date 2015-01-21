@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="2dp"
+    android:background="#e8e8e8" >
+
+    <RelativeLayout
+        android:id="@+id/secondactivity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#e6e6e6"
+        android:paddingTop="1dp" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="1dp"
+            android:background="#ffffff"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/LinearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/comm"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/comm"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left" >
+
+                    <com.danh32.fontify.TextView
+                         style="@style/sabon_bold"
+                        android:id="@+id/ivUpvote"
+                       
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:alpha="0.7"
+                        android:background="@drawable/agree_background"
+                        android:padding="3dp"
+                        android:text="23 Logical"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center" >
+
+                    <com.danh32.fontify.TextView
+                        android:id="@+id/ivDownvote"
+                        style="@style/sabon_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:alpha="0.7"
+                        android:background="@drawable/agree_background"
+                        android:padding="3dp"
+                        android:text="23 Illogical"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right" >
+
+                    <com.danh32.fontify.TextView
+                        android:id="@+id/ivReply"
+                        style="@style/sabon_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.7"
+                        android:background="@drawable/agree_background"
+                        android:padding="3dp"
+                        android:text="23 Reply"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/imageView1"
+                style="@style/walkwaybold"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="P"
+                android:textColor="#05060b"
+                android:textSize="40dp" />
+
+            <ImageView
+                android:id="@+id/dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:src="@drawable/pp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignTop="@+id/textView1"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:alpha="0.7"
+                android:src="@drawable/badge" />
+
+            <com.danh32.fontify.TextView
+                style="@style/Lato_Light"
+                
+                android:id="@+id/comm"
+                                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/imageView1"
+                android:layout_marginTop="5dp"
+                android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+                android:textColor="#05060b"
+                android:textSize="17dp" />
+
+            <com.danh32.fontify.TextView
+                 style="@style/sabon"
+                android:id="@+id/textView1"
+               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commentorName"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:alpha="0.7"
+                android:text="Eloquent"
+                android:textColor="#05060b"
+                android:textSize="18dp" />
+
+            <com.danh32.fontify.TextView
+                style="@style/LatoSemiBold"
+                android:id="@+id/commentorName"
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginTop="0dp"
+                android:text="Prateek Rathore :"
+                android:textColor="#05060b"
+                android:textSize="19dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

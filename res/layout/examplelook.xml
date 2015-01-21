@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout 
+         android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:orientation="vertical">
+    <RelativeLayout
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/download"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/frameLayout1"
+        android:layout_below="@+id/frameLayout1"
+        android:padding="7dp"
+        android:background="@drawable/questionbackground"
+        android:showDividers="middle" >
+
+        <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Agree"
+            android:textSize="15dp"
+            android:textColor="#555554"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+          <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvDisagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Disagree"
+            android:textSize="15dp"
+            android:textColor="#555554"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RelativeLayout1"
+        android:layout_below="@+id/RelativeLayout1"
+        android:padding="7dp" 
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+          <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/comm"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noUpvotes"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:alpha="0.7" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivUpvote"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Logical"
+                 />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noDownvotes"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:alpha="0.7"
+                android:text="32" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivDownvote"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Illogical"
+                 />
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView1"
+            style="@style/Cavier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="A"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm"
+            android:layout_alignParentTop="true"
+            android:text="Apurbala Singha"
+            android:textSize="17sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm"
+            style="@style/Cavier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#454646"
+            android:textSize="15sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView1"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm"
+            android:layout_below="@+id/commentorName"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView1"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+    </RelativeLayout>
+          <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/comm2"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm2"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noUpvotes2"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:alpha="0.7" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivUpvote2"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Logical"
+                 />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noDownvotes2"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:alpha="0.7"
+                android:text="32" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivDownvote2"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Illogical"
+                 />
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView3"
+            style="@style/Cavier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="P"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName2"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm2"
+            android:layout_alignParentTop="true"
+            android:text="Prateek Rathore :"
+            android:textSize="17sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm2"
+            style="@style/Cavier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageView3"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#454646"
+            android:textSize="15sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView2"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm2"
+            android:layout_below="@+id/commentorName2"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+    </RelativeLayout>
+
+       
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#25282a"
+        android:padding="5dp" >
+
+        <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW DELHI: It's been seven months and fiveNEW DELHI: It's been seven months and fiveNEW DELHI: It's been seven months and five"
+            android:textSize="17dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/relative_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/download"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/frameLayout2"
+        android:layout_below="@+id/frameLayout2"
+        android:padding="7dp"
+        android:background="@drawable/questionbackground"
+        android:showDividers="middle" >
+
+        <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvAgree2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Agree"
+            android:textSize="15dp"
+            android:textColor="#555554"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+          <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvDisagree2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Disagree"
+            android:textSize="15dp"
+            android:textColor="#555554"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearComments2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/RelativeLayout2"
+        android:layout_below="@+id/RelativeLayout2"
+        android:padding="7dp" 
+        android:background="#ffffff"
+        android:orientation="vertical"
+        >
+          <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout12"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/comm12"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm12"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noUpvotes12"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:alpha="0.7" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivUpvote12"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Logical"
+                 />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noDownvotes12"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:alpha="0.7"
+                android:text="32" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivDownvote12"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Illogical"
+                 />
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView12"
+            style="@style/Cavier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="A"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName12"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm12"
+            android:layout_alignParentTop="true"
+            android:text="Apurbalal Singha"
+            android:textSize="17sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm12"
+            style="@style/Cavier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView11"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageView12"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#454646"
+            android:textSize="15sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView11"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm12"
+            android:layout_below="@+id/commentorName12"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/textView11"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView11"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+    </RelativeLayout>
+    
+          
+          
+          
+          
+          <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout122"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/comm122"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm122"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noUpvotes122"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:alpha="0.7" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivUpvote122"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Logical"
+                 />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noDownvotes122"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:alpha="0.7"
+                android:text="32" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivDownvote122"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Illogical"
+                 />
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView122"
+            style="@style/Cavier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="S"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName122"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm122"
+            android:layout_alignParentTop="true"
+            android:text="Sandeep Singh"
+            android:textSize="17sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm122"
+            style="@style/Cavier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView112"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageView122"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#454646"
+            android:textSize="15sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView112"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm122"
+            android:layout_below="@+id/commentorName122"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView212"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/textView112"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView112"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="11dp" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout123"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/comm123"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/comm123"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal" >
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noUpvotes123"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23"
+                android:alpha="0.7" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivUpvote123"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Logical"
+                 />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/noDownvotes123"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:alpha="0.7"
+                android:text="32" />
+
+            <com.danh32.fontify.TextView
+                android:id="@+id/ivDownvote123"
+                style="@style/caviar_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:alpha="0.7"
+                android:text="Illogical"
+                 />
+        </LinearLayout>
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/imageView123"
+            style="@style/Cavier"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="A"
+            android:textColor="#000000"
+            android:textSize="40dp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/commentorName123"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm123"
+            android:layout_alignParentTop="true"
+            android:text="Apurbalal Singha"
+            android:textSize="17sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/comm123"
+            style="@style/Cavier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView113"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/imageView123"
+            android:text="This thing is weird that we dont believe in existence of shit until it falls on your head."
+            android:textColor="#454646"
+            android:textSize="15sp" />
+
+        <com.danh32.fontify.TextView
+            android:id="@+id/textView113"
+            style="@style/caviar_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/comm123"
+            android:layout_below="@+id/commentorName123"
+            android:alpha="0.7"
+            android:text="Eloquent"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/imageView213"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/textView113"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/textView113"
+            android:alpha="0.7"
+            android:src="@drawable/badge" />
+    </RelativeLayout>
+	
+       
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#25282a"
+        android:padding="5dp" >
+
+        <com.danh32.fontify.TextView
+            style="@style/caviar_bold"
+            android:id="@+id/tvQuestion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brendon Burchard is the #1 New York Times bestselling author of THE MILLIONAIRE MESSENGER, THE CHARGE, and LIFE'S GOLDEN TICKET. Larry King named him "
+            android:textSize="17dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff" />
+    </FrameLayout>
+
+</RelativeLayout>
+</LinearLayout>
+    
+
+</ScrollView>
