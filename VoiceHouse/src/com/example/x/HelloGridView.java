@@ -72,13 +72,9 @@ public class HelloGridView extends Activity {
 			(vi).setVisible(false);
 		}
 		return super.onCreateOptionsMenu(menu);
-
 	}
-
 	public void menu() {
-
 	}
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub

@@ -3,6 +3,8 @@ package com.example.x;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.facebook.widget.ProfilePictureView;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -15,9 +17,9 @@ public class SingleCommentView extends RelativeLayout {
 
 	LayoutInflater inflater = null;
 	TextView name, comment, upvotes, downvotes, reply;
-	int uVotes, dVotes, replies, commentId, discId, clientId;
+	int uVotes, dVotes, replies, commentId, discId,clientId;
 	String Comment, Name, disc;
-	ImageView profilePic;
+	ProfilePictureView profilePic;
 	JSONObject obj;
 	Context c;
 	
@@ -57,6 +59,8 @@ public class SingleCommentView extends RelativeLayout {
 		upvotes = (TextView) findViewById(R.id.ivUpvote);
 		downvotes = (TextView) findViewById(R.id.ivDownvote);
 		reply = (TextView) findViewById(R.id.ivReply);
+		profilePic=(ProfilePictureView) findViewById(R.id.propic);
+		profilePic.setProfileId(clientId+"");
 		name.setText(Name);
 		if (Comment.length() > 200) {
 			String s = Comment.substring(0, 199);

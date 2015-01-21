@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/viewallbacground"
+    android:orientation="vertical"
+    android:paddingLeft="10dp" >
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:onClick="clickEvent" >
+
+        <ImageView
+            android:id="@+id/post"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/post" />
+
+        <TextView
+            android:id="@+id/tvcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="8dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="1000" />
+    </FrameLayout>
+
+    <com.danh32.fontify.EditText
+        android:id="@+id/edit_text"
+        style="@style/Cavier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/frame"
+        android:layout_toRightOf="@+id/agreeSpinner"
+        android:background="#00000000"
+        android:hint="add your text"
+        android:textColor="#ffffff" />
+    <Spinner
+        android:id="@+id/agreeSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:popupBackground="@layout/spinner_back"/>
+
+    
+
+</RelativeLayout>

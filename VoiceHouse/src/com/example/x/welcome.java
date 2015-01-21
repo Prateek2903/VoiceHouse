@@ -12,13 +12,12 @@ import android.widget.TextView;
 
 public class welcome extends Activity {
 	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.welcome);
+		
 		TextView mytext = (TextView)findViewById(R.id.textView1);
 		TextView mytext2 = (TextView)findViewById(R.id.textView2);
 		getActionBar().hide();

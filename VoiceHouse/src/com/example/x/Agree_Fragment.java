@@ -32,15 +32,12 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class Agree_Fragment extends ListFragment{
-	
 	private QuickReturnListView mListView;
 	private View mHeader;
 	private TextView mQuickReturnView;
 	private TextView mPlaceHolder;
-	
 	private int mCachedVerticalScrollRange;
 	private int mQuickReturnHeight;
-	
 	private static final int STATE_ONSCREEN = 0;
 	private static final int STATE_OFFSCREEN = 1;
 	private static final int STATE_RETURNING = 2;
@@ -66,7 +63,6 @@ public class Agree_Fragment extends ListFragment{
 		get.execute();
 		mQuickReturnView.setText(getActivity().getIntent().getStringExtra("discussion"));
 		mPlaceHolder.setText(getActivity().getIntent().getStringExtra("discussion"));
-		
 		return view;
 	}
 	public void on()
@@ -246,7 +242,7 @@ public class Agree_Fragment extends ListFragment{
 	}
 	class GetComments extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
-		String url = "http://192.168.0.108/X/getallcomments.php";
+		String url = "http://192.168.160.1/X/getallcomments.php";
 
 		public GetComments() {
 			// this.paramets = params;
@@ -304,7 +300,6 @@ public class Agree_Fragment extends ListFragment{
 	public static class Comment {
 		String name, comment;
 		int comment_id, nmbr_of_logical, nmbr_of_ilogical, nmbr_of_comments;
-
 		public Comment(String name, String comment, int com_id, int logicals,
 				int ilogicals, int coms) {
 			// TODO Auto-generated constructor stub
@@ -315,45 +310,35 @@ public class Agree_Fragment extends ListFragment{
 			this.nmbr_of_ilogical = ilogicals;
 			this.nmbr_of_comments = coms;
 		}
-
 		public int getNmbr_of_logical() {
 			return nmbr_of_logical;
 		}
-
 		public void setNmbr_of_logical(int nmbr_of_logical) {
 			this.nmbr_of_logical = nmbr_of_logical;
 		}
-
 		public int getNmbr_of_ilogical() {
 			return nmbr_of_ilogical;
 		}
-
 		public void setNmbr_of_ilogical(int nmbr_of_ilogical) {
 			this.nmbr_of_ilogical = nmbr_of_ilogical;
 		}
-
 		public int getNmbr_of_comments() {
 			return nmbr_of_comments;
 		}
-
 		public void setNmbr_of_comments(int nmbr_of_comments) {
 			this.nmbr_of_comments = nmbr_of_comments;
 		}
-
 		public int getComment_id() {
 			return comment_id;
 		}
-
 		public void setComment_id(int comment_id) {
 			this.comment_id = comment_id;
 		}
-
 		public Comment(String name, String comment) {
 			// TODO Auto-generated constructor stub
 			this.name = name;
 			this.comment = comment;
 		}
-
 		public String getName() {
 			return name;
 		}
@@ -361,58 +346,47 @@ public class Agree_Fragment extends ListFragment{
 		public void setName(String name) {
 			this.name = name;
 		}
-
 		public String getComment() {
 			return comment;
 		}
-
 		public void setComment(String comment) {
 			this.comment = comment;
 		}
 	}
 	class CommentsAdapter extends BaseAdapter {
-
 		Context context;
 		Comment comment;
 		ArrayList<Comment> commList;
 		JSONObject jsonObject = new JSONObject();
 		int like, dislike, reply;
-
 		public int getReply() {
 			return reply;
 		}
-
 		public void setReply(int reply) {
 			this.reply = reply;
 		}
-
 		MyCommentHolder holder;
-
 		public CommentsAdapter(Context c, ArrayList<Comment> listComment) {
 			// TODO Auto-generated constructor stub
 			context = c;
 			commList = new ArrayList<Comment>();
 			commList = listComment;
 		}
-
 		@Override
 		public int getCount() {
 			// TODO Auto-generated method stub
 			return commList.size();
 		}
-
 		@Override
 		public Object getItem(int position) {
 			// TODO Auto-generated method stub
 			return commList.get(position);
 		}
-
 		@Override
 		public long getItemId(int position) {
 			// TODO Auto-generated method stub
 			return commList.get(position).hashCode();
 		}
-
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			// TODO Auto-generated method stub

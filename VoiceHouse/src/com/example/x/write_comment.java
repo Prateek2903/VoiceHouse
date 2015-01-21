@@ -171,7 +171,7 @@ public class write_comment extends TabActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.edit_text,menu);
 		View v = (View) menu.findItem(R.id.action_comment).getActionView();
-		et = (EditText) v.findViewById(R.id.edit_text);
+		//et = (EditText) v.findViewById(R.id.edit_text);
 		ImageView b = (ImageView) v.findViewById(R.id.post);
 		b.setOnClickListener(new OnClickListener() {
 

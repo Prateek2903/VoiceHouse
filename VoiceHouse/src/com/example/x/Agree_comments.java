@@ -33,8 +33,6 @@ public class Agree_comments extends Fragment
 		linearlayout = (LinearLayout)view.findViewById(R.id.lp);
 		return view;
 	}
-	
-	
 	class GetComments extends AsyncTask<Void, Void, Void> {
 		List<NameValuePair> paramets;
 		String url="http://192.168.0.108/X/getallcomments.php";

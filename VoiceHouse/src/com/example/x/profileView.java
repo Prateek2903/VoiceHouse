@@ -27,7 +27,7 @@ public class profileView extends Activity {
 	String[] choice_name;
 	JSONObject jArray;
 	JSONArray jsonarray;
-	public int client_id;
+	String client_id;
 	int nmbr_of_ilogical, nmbr_of_logical, nmbr_of_comments;
 	TextView tvlogicals, tvillogicals,tvcomments,tvrating,tvname;
 	double rating;
@@ -42,7 +42,7 @@ public class profileView extends Activity {
 		tvrating=(TextView) findViewById(R.id.textView5);
 		tvname=(TextView) findViewById(R.id.textView1);
 		lv = (ListView) findViewById(R.id.listView1);
-		client_id = 3;
+		client_id = getIntent().getStringExtra("client_id");
 
 		AsyncTask<String, String, String> a1 = new DownloadJSON();
 		a1.execute();
@@ -88,7 +88,7 @@ String rating(double i)
 			JSONParse jsonParser = new JSONParse(); // userchoices[spinner.getSelectedItemPosition()]
 			// Building Parameters
 			List<NameValuePair> params1 = new ArrayList<NameValuePair>();
-			params1.add(new BasicNameValuePair("client_id", "3"));
+			params1.add(new BasicNameValuePair("client_id", client_id));
 			jsonobject = jsonParser
 					.makeHttpRequest(
 							"http://192.168.0.108/X/fetchinterest.php", "POST",

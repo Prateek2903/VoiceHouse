@@ -1,7 +1,6 @@
 package com.example.x;
 
 import java.io.IOException;
-import java.io.ObjectInputStream.GetField;
 import java.util.HashMap;
 
 import android.annotation.SuppressLint;
@@ -23,7 +22,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -44,7 +42,8 @@ public class MainActivity extends FragmentActivity implements
 	DrawerLayout drawer;
 	static String[] choices;
 	static HashMap<String, String> map;
-
+	static int position;
+	
 	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
 	@SuppressLint("NewApi")
 	@Override
@@ -53,7 +52,8 @@ public class MainActivity extends FragmentActivity implements
 		setContentView(R.layout.activity_main);
 		pager = (ViewPager) findViewById(R.id.pager);
 		manager = getSupportFragmentManager();
-
+		
+		
 		actionbar = getActionBar();
 		// taking user choices //
 		drawer = (DrawerLayout) findViewById(R.id.drawerlayout);
@@ -61,9 +61,8 @@ public class MainActivity extends FragmentActivity implements
 				Context.MODE_PRIVATE);
 
 		// dividing it into each string
-		choices = user_choices.getString("choices", "Physics;Chemistry;Star")
-				.split(";");
-Log.d("Choices", choices.toString());
+		choices = user_choices.getString("choices",
+				"Physics;Chemistry;Star").split(";");
 		map = new HashMap<String, String>();
 		map.put("Business", "0");
 		map.put("Entertainment", "1");
@@ -73,7 +72,6 @@ Log.d("Choices", choices.toString());
 		map.put("Sports", "5");
 		map.put("Technology", "6");
 		map.put("Travel", "7");
-
 		// making tabs
 		actionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionbar.setDisplayShowHomeEnabled(false);
@@ -83,8 +81,8 @@ Log.d("Choices", choices.toString());
 		actionbar.setSplitBackgroundDrawable(new ColorDrawable(Color.rgb(20,
 				25, 45)));
 		actionbar.setBackgroundDrawable(new ColorDrawable(Color.rgb(0, 0, 0)));
-//		actionbar.addTab(actionbar.newTab().setIcon(R.drawable.flame)
-//				.setTabListener(this));
+		actionbar.addTab(actionbar.newTab().setIcon(R.drawable.flame)
+				.setTabListener(this));
 		for (int i = 0; i < choices.length; i++) {
 			Drawable d;
 			try {
@@ -101,9 +99,9 @@ Log.d("Choices", choices.toString());
 			}
 
 		}
-
+		
 		Context c = MainActivity.this;
-		frgmnt = new fragments(manager, count, c);
+		frgmnt = new fragments(manager, count+1, c);
 		pager.setAdapter(frgmnt);
 
 		drawer.setOnDragListener(new OnDragListener() {
@@ -174,6 +172,7 @@ Log.d("Choices", choices.toString());
 	public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
 		// TODO Auto-generated method stub
 		pager.setCurrentItem(arg0.getPosition());
+		position=arg0.getPosition()+1;
 	}
 
 	@Override
@@ -182,7 +181,6 @@ Log.d("Choices", choices.toString());
 
 	}
 }
-
 class fragments extends FragmentPagerAdapter {
 	Context v;
 	int count;
@@ -190,7 +188,7 @@ class fragments extends FragmentPagerAdapter {
 	public fragments(FragmentManager fm, int count, Context c) {
 		super(fm);
 		v = c;
-		this.count = count + 1;
+		this.count = count;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -200,11 +198,11 @@ class fragments extends FragmentPagerAdapter {
 		SharedPreferences.Editor page = v.getSharedPreferences("page",
 				Context.MODE_PRIVATE).edit();
 		String choice = MainActivity.choices[arg0];
+		System.out.println("Choice:"+choice);
 		String key = MainActivity.map.get(choice);
 		page.putString("Page", key);
 		page.commit();
-
-		return new Question();
+    	return new Question();
 	}
 
 	@Override

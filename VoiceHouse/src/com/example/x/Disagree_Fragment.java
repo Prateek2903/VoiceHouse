@@ -134,7 +134,7 @@ public class Disagree_Fragment extends ListFragment{
 					translationY = rawY;
 					break;
 				case STATE_RETURNING:
-					translationY =30+ rawY - mMinRawY - mQuickReturnHeight;
+					translationY = rawY - mMinRawY - mQuickReturnHeight;
 					Log.d("Translation y", "ray "+rawY+" Min RawY "+mMinRawY+" mQuick "+mQuickReturnHeight);
 					if (translationY > 0) {
 						translationY = 0;

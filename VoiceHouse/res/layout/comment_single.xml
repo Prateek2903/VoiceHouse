@@ -41,8 +41,9 @@
                     android:gravity="left" >
 
                     <com.danh32.fontify.TextView
+                         style="@style/sabon_bold"
                         android:id="@+id/ivUpvote"
-                        style="@style/sabon_bold"
+                       
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -126,9 +127,10 @@
                 android:src="@drawable/badge" />
 
             <com.danh32.fontify.TextView
-                android:id="@+id/comm"
                 style="@style/Lato_Light"
-                android:layout_width="wrap_content"
+                
+                android:id="@+id/comm"
+                                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/imageView1"
@@ -138,8 +140,9 @@
                 android:textSize="17dp" />
 
             <com.danh32.fontify.TextView
+                 style="@style/sabon"
                 android:id="@+id/textView1"
-                style="@style/sabon"
+               
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/commentorName"
@@ -152,8 +155,9 @@
                 android:textSize="18dp" />
 
             <com.danh32.fontify.TextView
-                android:id="@+id/commentorName"
                 style="@style/LatoSemiBold"
+                android:id="@+id/commentorName"
+                
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView1"

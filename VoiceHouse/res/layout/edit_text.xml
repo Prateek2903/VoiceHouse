@@ -30,10 +30,8 @@
             android:textColor="#000000"
             android:text="1000" />
     </FrameLayout>
-
-    <com.danh32.fontify.EditText
-        android:id="@+id/edit_text"
-        style="@style/Cavier"
+     <EditText
+        android:id="@+id/comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"

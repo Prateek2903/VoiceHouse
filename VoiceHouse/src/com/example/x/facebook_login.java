@@ -29,7 +29,7 @@ import com.facebook.model.GraphUser;
 public class facebook_login extends Activity {
  private Session.StatusCallback sessionStatusCallback;
  private Session currentSession;
-static GraphUser u;
+GraphUser u;
 Request request ;
  private ImageButton login;
  String name,id,email;

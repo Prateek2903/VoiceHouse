@@ -64,7 +64,7 @@ public class ReplyFinalTry extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.edit_text, menu);
 		View v = (View) menu.findItem(R.id.action_comment).getActionView();
-		et = (EditText) v.findViewById(R.id.edit_text);
+		//et = (EditText) v.findViewById(R.id.edit_text);
 		ImageView b = (ImageView) v.findViewById(R.id.post);
 		b.setOnClickListener(new OnClickListener() {
 
@@ -325,7 +325,7 @@ public class ReplyFinalTry extends Activity {
 			this.com_id = com_id;
 			logicals = uV;
 			illogicals = dV;
-			rating=(TextView) view.findViewById(R.id.rating);
+			rating=(TextView) view.findViewById(R.id.textView1);
 			reply = (TextView) view.findViewById(R.id.ivReply);
 		}
 		

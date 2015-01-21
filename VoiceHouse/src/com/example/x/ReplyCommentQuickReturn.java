@@ -249,31 +249,23 @@ public class ReplyCommentQuickReturn extends Activity {
 			public void onScrollStateChanged(AbsListView view, int scrollState) {
 			}
 		});
-
 	}
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.edit_text,menu);
-		View v = (View) menu.findItem(R.id.action_comment).getActionView();
-		et = (EditText) v.findViewById(R.id.edit_text);
-		ImageView b = (ImageView) v.findViewById(R.id.post);
-		b.setOnClickListener(new OnClickListener() {
+		super.onCreateOptionsMenu(menu);
+	   	getMenuInflater().inflate(R.menu.edit_text,menu);
+	   	View view = menu.findItem(R.id.action_comment).getActionView();
+	   	View v = view.findViewById(R.id.post);
+	   	v.setOnClickListener(new View.OnClickListener() {
+	@Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+	Log.d("Pressed","Post Button Clicked");
+	}
+	});
 
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				if (et.getText().toString() != null) {
-					params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("reply", et.getText()
-							.toString()));
-					params.add(new BasicNameValuePair("comment_id", comm_id+""));
-					params.add(new BasicNameValuePair("client_id", "1"));
-					Reply async= new Reply(params,"http://192.168.0.108/X/reply.php");
-					async.execute();
-				}
-			}
-		});
+
 		return super.onCreateOptionsMenu(menu);
 	}
 	

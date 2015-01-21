@@ -19,7 +19,6 @@ import android.support.v4.view.ViewPager;
 public class write_comment_latest extends FragmentActivity implements ActionBar.TabListener {
 	
     private ViewPager mPager;
-
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_comment);
@@ -28,12 +27,8 @@ public class write_comment_latest extends FragmentActivity implements ActionBar.
         PagerAdapter adapter = new FragmentStatePagerAdapter(getSupportFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-            
                         return new DefaultFragment();
-           
-          
             }
-
             @Override
             public int getCount() {
                 return 2;
@@ -66,7 +61,6 @@ public class write_comment_latest extends FragmentActivity implements ActionBar.
         }
 
         getActionBar().setDisplayShowHomeEnabled(false);
-        getActionBar().setDisplayShowTitleEnabled(false);
     }
 
     @Override
