@@ -2,30 +2,28 @@ package com.example.x;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
-import com.example.x.ReplyComment.CommentsAdapter.MyCommentHolder;
-import com.example.x.fragment_agree.Agreed;
-import com.example.x.fragment_agree.GetComments;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.example.x.ReplyComment.CommentsAdapter.MyCommentHolder;
 
 public class ReplyComment extends Activity{
 	
@@ -177,7 +175,7 @@ public class ReplyComment extends Activity{
 				if (this.result==1) {
 					
 				} else {
-					Toast.makeText(ReplyComment.this, "Failed", Toast.LENGTH_SHORT).show();
+					
 				}
 			super.onPostExecute(result);
 		}

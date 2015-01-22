@@ -46,7 +46,7 @@ public class welcome extends Activity {
 			@Override
 			public void onAnimationEnd(Animation arg0) {
 				// TODO Auto-generated method stub
-				startActivity(new Intent(welcome.this,facebook_login.class));
+				startActivity(new Intent(welcome.this,HelloGridView.class));
 				overridePendingTransition(R.anim.slidetop,R.anim.slidebottom);
 				finish();
 			}

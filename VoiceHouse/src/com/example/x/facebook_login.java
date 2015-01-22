@@ -208,7 +208,7 @@ SharedPreferences.Editor editor;
 	name=u.getName();
 	id=u.getId();
 	email=u.getProperty("email").toString();
-	Toast.makeText(facebook_login.this, "Name:"+name+"id:"+id, Toast.LENGTH_LONG).show();
+	
 	a1.execute();
 	}
 	}

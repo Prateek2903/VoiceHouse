@@ -100,7 +100,7 @@ String rating(double i)
 			JSONObject jsonobject1 = jsonarray.getJSONObject(0);
 					JSONArray jsonarr=jsonobject1.getJSONArray("choice_name");
 					choice_name = new String[jsonarr.length()];
-					for (int i = 0; i <= jsonarr.length()-1; i++) 
+					for (int i = 0; i <= jsonarr.length(); i++) 
 					{
 					choice_name[i]=jsonarr.getString(i);
 						System.out.println("choice:"+choice_name[i]);

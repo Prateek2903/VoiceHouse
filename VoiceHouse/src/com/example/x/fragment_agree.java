@@ -352,6 +352,9 @@ public class fragment_agree extends Fragment implements
 					Intent intent = new Intent(getActivity(),
 							ReplyComment.class);
 					intent.putExtra("comm_id", i);
+					intent.putExtra("name", comment.getName());
+					intent.putExtra("illogical", comment.getNmbr_of_ilogical());
+					intent.putExtra("logical", comment.getNmbr_of_logical());
 					startActivity(intent);
 				}
 			});

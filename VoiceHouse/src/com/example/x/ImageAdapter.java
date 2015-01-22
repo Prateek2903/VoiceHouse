@@ -128,7 +128,7 @@ public class ImageAdapter extends BaseAdapter {
 				
 				String temp[] = choices.split(";");
 				String tmp[] = choice.split(";");
-				for (int i = 0; i < temp.length; i++) {
+				for (int i = 0; i < temp.length; ++i) {
 					if (temp[i].equals("" + result[position])) {
 						temp[i] = "";
 						tmp[i] = "";
@@ -138,7 +138,7 @@ public class ImageAdapter extends BaseAdapter {
 				String temch = "";
 				String tmch = "";
 				
-				for (int i = 0; i < temp.length; i++)
+				for (int i = 0; i < temp.length; ++i)
 				{	temch = temch + ";" + temp[i];
 					tmch = tmch+ ";"+tmp[i];
 				}
